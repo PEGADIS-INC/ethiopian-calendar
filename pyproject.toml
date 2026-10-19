@@ -1,0 +1,25 @@
+[project]
+name = "ethiopian-calendar"
+description = "Ethiopian (EC) and Gregorian (GC) calendar conversion, fiscal periods, holidays and formatting"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = []  # pure Python: must never depend on Frappe
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "ethiopian_calendar.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I"]
